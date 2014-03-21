@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00FCE9CE18DC8BCC00CD05F1 /* NSData+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FCE9CD18DC8BCC00CD05F1 /* NSData+Utilities.m */; };
 		E40CEED318C8E99600B9B136 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40CEED218C8E99600B9B136 /* Foundation.framework */; };
 		E40CEED518C8E99600B9B136 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40CEED418C8E99600B9B136 /* CoreGraphics.framework */; };
 		E40CEED718C8E99600B9B136 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40CEED618C8E99600B9B136 /* UIKit.framework */; };
@@ -37,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00FCE9CC18DC8BCC00CD05F1 /* NSData+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Utilities.h"; sourceTree = "<group>"; };
+		00FCE9CD18DC8BCC00CD05F1 /* NSData+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Utilities.m"; sourceTree = "<group>"; };
+		00FCE9CF18DC8CD700CD05F1 /* Widgetorium.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Widgetorium.podspec; sourceTree = SOURCE_ROOT; };
 		E40CEECF18C8E99600B9B136 /* Widgetorium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Widgetorium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E40CEED218C8E99600B9B136 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E40CEED418C8E99600B9B136 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -87,9 +91,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00FCE9CB18DC8B9400CD05F1 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				00FCE9CC18DC8BCC00CD05F1 /* NSData+Utilities.h */,
+				00FCE9CD18DC8BCC00CD05F1 /* NSData+Utilities.m */,
+			);
+			name = Categories;
+			path = Categories/ios;
+			sourceTree = "<group>";
+		};
 		E40CEEC618C8E99600B9B136 = {
 			isa = PBXGroup;
 			children = (
+				00FCE9CB18DC8B9400CD05F1 /* Categories */,
 				E40CEF0218C8EA7E00B9B136 /* Resources */,
 				E40CEF0118C8EA5B00B9B136 /* Classes */,
 				E40CEED818C8E99600B9B136 /* Widgetorium */,
@@ -134,6 +149,7 @@
 		E40CEED918C8E99600B9B136 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				00FCE9CF18DC8CD700CD05F1 /* Widgetorium.podspec */,
 				E40CEEDA18C8E99600B9B136 /* Widgetorium-Info.plist */,
 				E40CEEDB18C8E99600B9B136 /* InfoPlist.strings */,
 				E40CEEDE18C8E99600B9B136 /* main.m */,
@@ -293,6 +309,7 @@
 				E40CEEE318C8E99600B9B136 /* SCVAppDelegate.m in Sources */,
 				E40CEF0F18C901E800B9B136 /* SCVDemoTableViewController.m in Sources */,
 				E40CEF1418C9055B00B9B136 /* SCVLoadingViewController.m in Sources */,
+				00FCE9CE18DC8BCC00CD05F1 /* NSData+Utilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

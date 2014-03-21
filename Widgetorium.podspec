@@ -23,8 +23,8 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '6.1.3'
   s.requires_arc = true
 
-  s.source_files = 'Classes/ios/**/*.{h,m}'
+  s.source_files = 'Classes/ios/**/*.{h,m}', 'Categories/ios/**/*.{h,m}'
 
-  s.ios.exclude_files = 'Classes/osx'
-  s.osx.exclude_files = 'Classes/ios'
+  s.ios.exclude_files = 'Classes/osx', 'Categories/osx'
+  s.osx.exclude_files = 'Classes/ios', 'Categories/ios'
 end
