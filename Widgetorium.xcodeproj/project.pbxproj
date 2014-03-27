@@ -20,7 +20,7 @@
 		E40CEEED18C8E99600B9B136 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40CEED218C8E99600B9B136 /* Foundation.framework */; };
 		E40CEEEE18C8E99600B9B136 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40CEED618C8E99600B9B136 /* UIKit.framework */; };
 		E40CEEF618C8E99600B9B136 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E40CEEF418C8E99600B9B136 /* InfoPlist.strings */; };
-		E40CEEF818C8E99600B9B136 /* WidgetoriumTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E40CEEF718C8E99600B9B136 /* WidgetoriumTests.m */; };
+		E40CEEF818C8E99600B9B136 /* UIColorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E40CEEF718C8E99600B9B136 /* UIColorTests.m */; };
 		E40CEF0518C8EAAD00B9B136 /* SCVLoadingScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = E40CEF0418C8EAAD00B9B136 /* SCVLoadingScreen.m */; };
 		E40CEF0F18C901E800B9B136 /* SCVDemoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E40CEF0D18C901E800B9B136 /* SCVDemoTableViewController.m */; };
 		E40CEF1018C901E800B9B136 /* SCVDemoTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E40CEF0E18C901E800B9B136 /* SCVDemoTableViewController.xib */; };
@@ -59,7 +59,7 @@
 		E40CEEEB18C8E99600B9B136 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		E40CEEF318C8E99600B9B136 /* WidgetoriumTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WidgetoriumTests-Info.plist"; sourceTree = "<group>"; };
 		E40CEEF518C8E99600B9B136 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E40CEEF718C8E99600B9B136 /* WidgetoriumTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WidgetoriumTests.m; sourceTree = "<group>"; };
+		E40CEEF718C8E99600B9B136 /* UIColorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIColorTests.m; sourceTree = "<group>"; };
 		E40CEF0318C8EAAD00B9B136 /* SCVLoadingScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCVLoadingScreen.h; sourceTree = "<group>"; };
 		E40CEF0418C8EAAD00B9B136 /* SCVLoadingScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCVLoadingScreen.m; sourceTree = "<group>"; };
 		E40CEF0C18C901E800B9B136 /* SCVDemoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCVDemoTableViewController.h; sourceTree = "<group>"; };
@@ -166,7 +166,7 @@
 		E40CEEF118C8E99600B9B136 /* WidgetoriumTests */ = {
 			isa = PBXGroup;
 			children = (
-				E40CEEF718C8E99600B9B136 /* WidgetoriumTests.m */,
+				E40CEEF718C8E99600B9B136 /* UIColorTests.m */,
 				E40CEEF218C8E99600B9B136 /* Supporting Files */,
 			);
 			path = WidgetoriumTests;
@@ -323,7 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E40CEEF818C8E99600B9B136 /* WidgetoriumTests.m in Sources */,
+				E40CEEF818C8E99600B9B136 /* UIColorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

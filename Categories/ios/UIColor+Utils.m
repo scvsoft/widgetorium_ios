@@ -21,4 +21,16 @@
     return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
 }
 
+- (UIColor *)colorWithRGBColorSpace
+{
+    if (CGColorSpaceGetModel(CGColorGetColorSpace([self CGColor])) == kCGColorSpaceModelMonochrome) {
+        const CGFloat *oldComponents = CGColorGetComponents([self CGColor]);
+        return [UIColor colorWithRed:oldComponents[0]
+                               green:oldComponents[0]
+                                blue:oldComponents[0]
+                               alpha:oldComponents[1]];
+    }
+    return self;
+}
+
 @end

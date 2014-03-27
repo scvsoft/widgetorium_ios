@@ -14,4 +14,6 @@
 //  RR red value, GG green value, BB blue value, AA alpha value
 + (UIColor *)colorWithHexa:(NSUInteger)hexaValue;
 
+- (UIColor *)colorWithRGBColorSpace;
+
 @end
