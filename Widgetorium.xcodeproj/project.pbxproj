@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		00FCE9CE18DC8BCC00CD05F1 /* NSData+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FCE9CD18DC8BCC00CD05F1 /* NSData+Utilities.m */; };
+		882AA0CD18EDD013006CBBCC /* SCVURLImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 882AA0CC18EDD013006CBBCC /* SCVURLImageCache.m */; };
+		882AA0D018EDD033006CBBCC /* UIImageView+ImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 882AA0CF18EDD033006CBBCC /* UIImageView+ImageLoader.m */; };
+		882AA0D218EDDC10006CBBCC /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 882AA0D118EDDC10006CBBCC /* libsqlite3.dylib */; };
+		882AA0D518EE0481006CBBCC /* SCVDemoImageLoaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 882AA0D418EE0481006CBBCC /* SCVDemoImageLoaderViewController.m */; };
+		882AA0D718EE04A3006CBBCC /* SCVDemoImageLoaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 882AA0D618EE04A3006CBBCC /* SCVDemoImageLoaderViewController.xib */; };
+		882AA0D918EE0570006CBBCC /* SCVDemoImageLoaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 882AA0D818EE0570006CBBCC /* SCVDemoImageLoaderCell.xib */; };
+		882AA0DC18EE1933006CBBCC /* SCVURLDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 882AA0DB18EE1933006CBBCC /* SCVURLDownloader.m */; };
+		882AA0E018EE2F29006CBBCC /* demoImages.plist in Resources */ = {isa = PBXBuildFile; fileRef = 882AA0DF18EE2F29006CBBCC /* demoImages.plist */; };
 		88DB8B9618E3670D00614664 /* UIColor+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DB8B9518E3670D00614664 /* UIColor+Utils.m */; };
 		E40CEED318C8E99600B9B136 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40CEED218C8E99600B9B136 /* Foundation.framework */; };
 		E40CEED518C8E99600B9B136 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40CEED418C8E99600B9B136 /* CoreGraphics.framework */; };
@@ -42,6 +50,18 @@
 		00FCE9CC18DC8BCC00CD05F1 /* NSData+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Utilities.h"; sourceTree = "<group>"; };
 		00FCE9CD18DC8BCC00CD05F1 /* NSData+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Utilities.m"; sourceTree = "<group>"; };
 		00FCE9CF18DC8CD700CD05F1 /* Widgetorium.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Widgetorium.podspec; sourceTree = SOURCE_ROOT; };
+		882AA0CB18EDD013006CBBCC /* SCVURLImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCVURLImageCache.h; sourceTree = "<group>"; };
+		882AA0CC18EDD013006CBBCC /* SCVURLImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCVURLImageCache.m; sourceTree = "<group>"; };
+		882AA0CE18EDD033006CBBCC /* UIImageView+ImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+ImageLoader.h"; sourceTree = "<group>"; };
+		882AA0CF18EDD033006CBBCC /* UIImageView+ImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+ImageLoader.m"; sourceTree = "<group>"; };
+		882AA0D118EDDC10006CBBCC /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		882AA0D318EE0481006CBBCC /* SCVDemoImageLoaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCVDemoImageLoaderViewController.h; sourceTree = "<group>"; };
+		882AA0D418EE0481006CBBCC /* SCVDemoImageLoaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCVDemoImageLoaderViewController.m; sourceTree = "<group>"; };
+		882AA0D618EE04A3006CBBCC /* SCVDemoImageLoaderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCVDemoImageLoaderViewController.xib; sourceTree = "<group>"; };
+		882AA0D818EE0570006CBBCC /* SCVDemoImageLoaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCVDemoImageLoaderCell.xib; sourceTree = "<group>"; };
+		882AA0DA18EE1933006CBBCC /* SCVURLDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCVURLDownloader.h; sourceTree = "<group>"; };
+		882AA0DB18EE1933006CBBCC /* SCVURLDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCVURLDownloader.m; sourceTree = "<group>"; };
+		882AA0DF18EE2F29006CBBCC /* demoImages.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = demoImages.plist; sourceTree = "<group>"; };
 		88DB8B9418E3670D00614664 /* UIColor+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Utils.h"; sourceTree = "<group>"; };
 		88DB8B9518E3670D00614664 /* UIColor+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Utils.m"; sourceTree = "<group>"; };
 		E40CEECF18C8E99600B9B136 /* Widgetorium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Widgetorium.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				882AA0D218EDDC10006CBBCC /* libsqlite3.dylib in Frameworks */,
 				E40CEED518C8E99600B9B136 /* CoreGraphics.framework in Frameworks */,
 				E40CEED718C8E99600B9B136 /* UIKit.framework in Frameworks */,
 				E40CEED318C8E99600B9B136 /* Foundation.framework in Frameworks */,
@@ -106,6 +127,19 @@
 			path = Categories/ios;
 			sourceTree = "<group>";
 		};
+		882AA0CA18EDCFD7006CBBCC /* URLImageCache */ = {
+			isa = PBXGroup;
+			children = (
+				882AA0CB18EDD013006CBBCC /* SCVURLImageCache.h */,
+				882AA0CC18EDD013006CBBCC /* SCVURLImageCache.m */,
+				882AA0DA18EE1933006CBBCC /* SCVURLDownloader.h */,
+				882AA0DB18EE1933006CBBCC /* SCVURLDownloader.m */,
+				882AA0CE18EDD033006CBBCC /* UIImageView+ImageLoader.h */,
+				882AA0CF18EDD033006CBBCC /* UIImageView+ImageLoader.m */,
+			);
+			name = URLImageCache;
+			sourceTree = "<group>";
+		};
 		E40CEEC618C8E99600B9B136 = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +165,7 @@
 		E40CEED118C8E99600B9B136 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				882AA0D118EDDC10006CBBCC /* libsqlite3.dylib */,
 				E40CEED218C8E99600B9B136 /* Foundation.framework */,
 				E40CEED418C8E99600B9B136 /* CoreGraphics.framework */,
 				E40CEED618C8E99600B9B136 /* UIKit.framework */,
@@ -184,6 +219,7 @@
 		E40CEF0118C8EA5B00B9B136 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				882AA0CA18EDCFD7006CBBCC /* URLImageCache */,
 				E40CEF0318C8EAAD00B9B136 /* SCVLoadingScreen.h */,
 				E40CEF0418C8EAAD00B9B136 /* SCVLoadingScreen.m */,
 			);
@@ -207,6 +243,11 @@
 				E40CEF1118C9055B00B9B136 /* SCVLoadingViewController.h */,
 				E40CEF1218C9055B00B9B136 /* SCVLoadingViewController.m */,
 				E40CEF1318C9055B00B9B136 /* SCVLoadingViewController.xib */,
+				882AA0D318EE0481006CBBCC /* SCVDemoImageLoaderViewController.h */,
+				882AA0D418EE0481006CBBCC /* SCVDemoImageLoaderViewController.m */,
+				882AA0D618EE04A3006CBBCC /* SCVDemoImageLoaderViewController.xib */,
+				882AA0D818EE0570006CBBCC /* SCVDemoImageLoaderCell.xib */,
+				882AA0DF18EE2F29006CBBCC /* demoImages.plist */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -287,10 +328,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				882AA0E018EE2F29006CBBCC /* demoImages.plist in Resources */,
 				E40CEF1018C901E800B9B136 /* SCVDemoTableViewController.xib in Resources */,
 				E40CEEDD18C8E99600B9B136 /* InfoPlist.strings in Resources */,
 				E40CEF1518C9055B00B9B136 /* SCVLoadingViewController.xib in Resources */,
 				E40CEEE518C8E99600B9B136 /* Images.xcassets in Resources */,
+				882AA0D918EE0570006CBBCC /* SCVDemoImageLoaderCell.xib in Resources */,
+				882AA0D718EE04A3006CBBCC /* SCVDemoImageLoaderViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,9 +355,13 @@
 			files = (
 				88DB8B9618E3670D00614664 /* UIColor+Utils.m in Sources */,
 				E40CEF0518C8EAAD00B9B136 /* SCVLoadingScreen.m in Sources */,
+				882AA0D018EDD033006CBBCC /* UIImageView+ImageLoader.m in Sources */,
 				E40CEEDF18C8E99600B9B136 /* main.m in Sources */,
+				882AA0CD18EDD013006CBBCC /* SCVURLImageCache.m in Sources */,
 				E40CEEE318C8E99600B9B136 /* SCVAppDelegate.m in Sources */,
 				E40CEF0F18C901E800B9B136 /* SCVDemoTableViewController.m in Sources */,
+				882AA0DC18EE1933006CBBCC /* SCVURLDownloader.m in Sources */,
+				882AA0D518EE0481006CBBCC /* SCVDemoImageLoaderViewController.m in Sources */,
 				E40CEF1418C9055B00B9B136 /* SCVLoadingViewController.m in Sources */,
 				00FCE9CE18DC8BCC00CD05F1 /* NSData+Utilities.m in Sources */,
 			);

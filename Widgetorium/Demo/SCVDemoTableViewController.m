@@ -8,18 +8,24 @@
 
 #import "SCVDemoTableViewController.h"
 #import "SCVLoadingViewController.h"
+#import "SCVDemoImageLoaderViewController.h"
 
 @interface SCVDemoTableViewController ()
+
+@property (nonatomic, strong) NSDictionary *cellsInfo;
 
 @end
 
 @implementation SCVDemoTableViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
+- (id)init
 {
-    self = [super initWithStyle:style];
+    self = [super init];
     if (self) {
-        // Custom initialization
+        self.cellsInfo = @{
+            @"Loading View": [SCVLoadingViewController class],
+            @"Image Loader": [SCVDemoImageLoaderViewController class]
+        };
     }
     return self;
 }
@@ -52,7 +58,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return [self.cellsInfo count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -63,7 +69,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    cell.textLabel.text = @"Loading view";
+    cell.textLabel.text = [self.cellsInfo allKeys][indexPath.row];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
@@ -114,7 +120,8 @@
 // In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UIViewController *vc = [SCVLoadingViewController new];
+    Class class = self.cellsInfo[[self.cellsInfo allKeys][indexPath.row]];
+    UIViewController *vc = [class new];
     vc.title = [tableView cellForRowAtIndexPath:indexPath].textLabel.text;
 
     [self.navigationController pushViewController:vc animated:YES];
