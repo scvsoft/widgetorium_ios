@@ -16,7 +16,11 @@
 		882AA0D918EE0570006CBBCC /* SCVDemoImageLoaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 882AA0D818EE0570006CBBCC /* SCVDemoImageLoaderCell.xib */; };
 		882AA0DC18EE1933006CBBCC /* SCVURLDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 882AA0DB18EE1933006CBBCC /* SCVURLDownloader.m */; };
 		882AA0E018EE2F29006CBBCC /* demoImages.plist in Resources */ = {isa = PBXBuildFile; fileRef = 882AA0DF18EE2F29006CBBCC /* demoImages.plist */; };
+		882AA0EA18EF2A12006CBBCC /* NSObject+SCVModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 882AA0E918EF2A12006CBBCC /* NSObject+SCVModel.m */; };
+		882AA0EF18EF52F4006CBBCC /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 882AA0EE18EF52F4006CBBCC /* Podfile */; };
+		882AA0F218EF55FC006CBBCC /* SCVModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 882AA0F118EF55FC006CBBCC /* SCVModelTest.m */; };
 		88DB8B9618E3670D00614664 /* UIColor+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DB8B9518E3670D00614664 /* UIColor+Utils.m */; };
+		D3A5B3185792452CAA749C78 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EB743D22A0F421CA6DA163E /* libPods.a */; };
 		E40CEED318C8E99600B9B136 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40CEED218C8E99600B9B136 /* Foundation.framework */; };
 		E40CEED518C8E99600B9B136 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40CEED418C8E99600B9B136 /* CoreGraphics.framework */; };
 		E40CEED718C8E99600B9B136 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40CEED618C8E99600B9B136 /* UIKit.framework */; };
@@ -50,6 +54,8 @@
 		00FCE9CC18DC8BCC00CD05F1 /* NSData+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Utilities.h"; sourceTree = "<group>"; };
 		00FCE9CD18DC8BCC00CD05F1 /* NSData+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Utilities.m"; sourceTree = "<group>"; };
 		00FCE9CF18DC8CD700CD05F1 /* Widgetorium.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Widgetorium.podspec; sourceTree = SOURCE_ROOT; };
+		1EB743D22A0F421CA6DA163E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		520F1405D4B94137ADD8DEDA /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		882AA0CB18EDD013006CBBCC /* SCVURLImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCVURLImageCache.h; sourceTree = "<group>"; };
 		882AA0CC18EDD013006CBBCC /* SCVURLImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCVURLImageCache.m; sourceTree = "<group>"; };
 		882AA0CE18EDD033006CBBCC /* UIImageView+ImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+ImageLoader.h"; sourceTree = "<group>"; };
@@ -62,6 +68,11 @@
 		882AA0DA18EE1933006CBBCC /* SCVURLDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCVURLDownloader.h; sourceTree = "<group>"; };
 		882AA0DB18EE1933006CBBCC /* SCVURLDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCVURLDownloader.m; sourceTree = "<group>"; };
 		882AA0DF18EE2F29006CBBCC /* demoImages.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = demoImages.plist; sourceTree = "<group>"; };
+		882AA0E818EF2A12006CBBCC /* NSObject+SCVModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SCVModel.h"; sourceTree = "<group>"; };
+		882AA0E918EF2A12006CBBCC /* NSObject+SCVModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SCVModel.m"; sourceTree = "<group>"; };
+		882AA0EB18EF2E85006CBBCC /* SCVModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCVModel.h; sourceTree = "<group>"; };
+		882AA0EE18EF52F4006CBBCC /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		882AA0F118EF55FC006CBBCC /* SCVModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCVModelTest.m; sourceTree = "<group>"; };
 		88DB8B9418E3670D00614664 /* UIColor+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Utils.h"; sourceTree = "<group>"; };
 		88DB8B9518E3670D00614664 /* UIColor+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Utils.m"; sourceTree = "<group>"; };
 		E40CEECF18C8E99600B9B136 /* Widgetorium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Widgetorium.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +110,7 @@
 				E40CEED518C8E99600B9B136 /* CoreGraphics.framework in Frameworks */,
 				E40CEED718C8E99600B9B136 /* UIKit.framework in Frameworks */,
 				E40CEED318C8E99600B9B136 /* Foundation.framework in Frameworks */,
+				D3A5B3185792452CAA749C78 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +152,16 @@
 			name = URLImageCache;
 			sourceTree = "<group>";
 		};
+		882AA0E418EF295C006CBBCC /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				882AA0EB18EF2E85006CBBCC /* SCVModel.h */,
+				882AA0E818EF2A12006CBBCC /* NSObject+SCVModel.h */,
+				882AA0E918EF2A12006CBBCC /* NSObject+SCVModel.m */,
+			);
+			name = Parser;
+			sourceTree = "<group>";
+		};
 		E40CEEC618C8E99600B9B136 = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +172,7 @@
 				E40CEEF118C8E99600B9B136 /* WidgetoriumTests */,
 				E40CEED118C8E99600B9B136 /* Frameworks */,
 				E40CEED018C8E99600B9B136 /* Products */,
+				520F1405D4B94137ADD8DEDA /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -170,6 +193,7 @@
 				E40CEED418C8E99600B9B136 /* CoreGraphics.framework */,
 				E40CEED618C8E99600B9B136 /* UIKit.framework */,
 				E40CEEEB18C8E99600B9B136 /* XCTest.framework */,
+				1EB743D22A0F421CA6DA163E /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -189,6 +213,7 @@
 		E40CEED918C8E99600B9B136 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				882AA0EE18EF52F4006CBBCC /* Podfile */,
 				00FCE9CF18DC8CD700CD05F1 /* Widgetorium.podspec */,
 				E40CEEDA18C8E99600B9B136 /* Widgetorium-Info.plist */,
 				E40CEEDB18C8E99600B9B136 /* InfoPlist.strings */,
@@ -202,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				E40CEEF718C8E99600B9B136 /* UIColorTests.m */,
+				882AA0F118EF55FC006CBBCC /* SCVModelTest.m */,
 				E40CEEF218C8E99600B9B136 /* Supporting Files */,
 			);
 			path = WidgetoriumTests;
@@ -220,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				882AA0CA18EDCFD7006CBBCC /* URLImageCache */,
+				882AA0E418EF295C006CBBCC /* Parser */,
 				E40CEF0318C8EAAD00B9B136 /* SCVLoadingScreen.h */,
 				E40CEF0418C8EAAD00B9B136 /* SCVLoadingScreen.m */,
 			);
@@ -259,9 +286,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E40CEEFB18C8E99600B9B136 /* Build configuration list for PBXNativeTarget "Widgetorium" */;
 			buildPhases = (
+				1FA67ABE06D642A68F5B70EC /* Check Pods Manifest.lock */,
 				E40CEECB18C8E99600B9B136 /* Sources */,
 				E40CEECC18C8E99600B9B136 /* Frameworks */,
 				E40CEECD18C8E99600B9B136 /* Resources */,
+				9868A4E2802349AB9EA7E2E6 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -329,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				882AA0E018EE2F29006CBBCC /* demoImages.plist in Resources */,
+				882AA0EF18EF52F4006CBBCC /* Podfile in Resources */,
 				E40CEF1018C901E800B9B136 /* SCVDemoTableViewController.xib in Resources */,
 				E40CEEDD18C8E99600B9B136 /* InfoPlist.strings in Resources */,
 				E40CEF1518C9055B00B9B136 /* SCVLoadingViewController.xib in Resources */,
@@ -348,6 +378,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1FA67ABE06D642A68F5B70EC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9868A4E2802349AB9EA7E2E6 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E40CEECB18C8E99600B9B136 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -363,6 +426,7 @@
 				882AA0DC18EE1933006CBBCC /* SCVURLDownloader.m in Sources */,
 				882AA0D518EE0481006CBBCC /* SCVDemoImageLoaderViewController.m in Sources */,
 				E40CEF1418C9055B00B9B136 /* SCVLoadingViewController.m in Sources */,
+				882AA0EA18EF2A12006CBBCC /* NSObject+SCVModel.m in Sources */,
 				00FCE9CE18DC8BCC00CD05F1 /* NSData+Utilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,6 +435,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				882AA0F218EF55FC006CBBCC /* SCVModelTest.m in Sources */,
 				E40CEEF818C8E99600B9B136 /* UIColorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,6 +546,7 @@
 		};
 		E40CEEFC18C8E99600B9B136 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 520F1405D4B94137ADD8DEDA /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -494,6 +560,7 @@
 		};
 		E40CEEFD18C8E99600B9B136 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 520F1405D4B94137ADD8DEDA /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
