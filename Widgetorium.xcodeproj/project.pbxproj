@@ -71,7 +71,7 @@
 		882AA0E818EF2A12006CBBCC /* NSObject+SCVModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SCVModel.h"; sourceTree = "<group>"; };
 		882AA0E918EF2A12006CBBCC /* NSObject+SCVModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SCVModel.m"; sourceTree = "<group>"; };
 		882AA0EB18EF2E85006CBBCC /* SCVModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCVModel.h; sourceTree = "<group>"; };
-		882AA0EE18EF52F4006CBBCC /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		882AA0EE18EF52F4006CBBCC /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		882AA0F118EF55FC006CBBCC /* SCVModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCVModelTest.m; sourceTree = "<group>"; };
 		88DB8B9418E3670D00614664 /* UIColor+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Utils.h"; sourceTree = "<group>"; };
 		88DB8B9518E3670D00614664 /* UIColor+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Utils.m"; sourceTree = "<group>"; };

@@ -23,6 +23,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '6.1.3'
   s.requires_arc = true
   s.libraries = 'sqlite3'
+  s.dependency 'NSObjectProperties', '~> 0.0.3'
 
   s.source_files = 'Classes/ios/**/*.{h,m}', 'Categories/ios/**/*.{h,m}'
 
