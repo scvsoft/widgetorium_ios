@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Widgetorium"
-  s.version          = "0.0.1"
+  s.version          = "0.0.2"
   s.summary          = "A small set of widgets/controls that we usually reuse on several projects and we thought it was a good idea to make it a CocoaPod library."
   s.description      = <<-DESC
                        Widgetorium is not meant to be a big framework that will force you to work like

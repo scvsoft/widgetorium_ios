@@ -18,15 +18,12 @@
         == [NSObject instanceMethodForSelector:_cmd]) {
         return [self autopopulateWithDictionary:dictionary options:options error:error];
     }
-    else if (error) {
-        *error = nil;
-    }
     return NO;
 }
 
 - (BOOL)autopopulateWithDictionary:(NSDictionary *)dictionary options:(NSDictionary *)options error:(NSError *__autoreleasing *)returnError
 {
-    NSError *error;
+    NSError *error = nil;
 	NSArray* keys = [dictionary allKeys];
 	for (NSString *theKey in keys) {
 		id value = [dictionary valueForKey:theKey];
@@ -40,6 +37,21 @@
             switch ([self typeForSignature:signature]) {
                 case SCVModelPropertyTypeBool: {
                     BOOL str = [[self numberWithValue:value forKey:key] boolValue];
+                    [invocation setArgument:&str atIndex:2];
+                    break;
+                }
+                case SCVModelPropertyTypeUnsignedChar: {
+                    int str = [[self numberWithValue:value forKey:key] unsignedCharValue];
+                    [invocation setArgument:&str atIndex:2];
+                    break;
+                }
+                case SCVModelPropertyTypeChar: {
+                    int str = [[self numberWithValue:value forKey:key] charValue];
+                    [invocation setArgument:&str atIndex:2];
+                    break;
+                }
+                case SCVModelPropertyTypeUnsignedInt: {
+                    int str = [[self numberWithValue:value forKey:key] unsignedIntValue];
                     [invocation setArgument:&str atIndex:2];
                     break;
                 }
@@ -95,6 +107,10 @@
 
 - (NSString *)keyForDictionaryKey:(NSString *)key
 {
+    NSRange location;
+    while ((location = [key rangeOfString:@"_"]).location != NSNotFound) {
+        key = [NSString stringWithFormat:@"%@%c%@", [key substringToIndex:location.location], toupper([key characterAtIndex:location.location + 1]), [key substringFromIndex:location.location + 1 + location.length]];
+    }
     if (![[self class] hasPropertyNamed:key]) {
         key = [NSString stringWithFormat:@"%@%@", [[key substringToIndex:1] lowercaseString], [key substringFromIndex:1]];
     }
@@ -137,6 +153,9 @@
     if (strcmp(type,@encode(int)) == 0) {
         return SCVModelPropertyTypeInt;
     }
+    else if (strcmp(type,@encode(unsigned int)) == 0) {
+        return SCVModelPropertyTypeUnsignedInt;
+    }
     else if (strcmp(type,@encode(double)) == 0) {
         return SCVModelPropertyTypeDouble;
     }
@@ -149,6 +168,12 @@
     else if (strcmp(type,@encode(long long)) == 0) {
         return SCVModelPropertyTypeLong;
     }
+    else if (strcmp(type,@encode(char)) == 0) {
+        return SCVModelPropertyTypeChar;
+    }
+    else if (strcmp(type,@encode(unsigned char)) == 0) {
+        return SCVModelPropertyTypeUnsignedChar;
+    }
     else if (strcmp(type, @encode(BOOL)) == 0) {
         return SCVModelPropertyTypeBool;
     }
@@ -160,7 +185,10 @@
     @throw [NSException exceptionWithName:@"SCV.ModelAutopopulateCouldNotResolveClass" reason:[NSString stringWithFormat:@"Model autopopulate could not resolve class name for items in property array %@", key] userInfo:nil];
 }
 
-- (NSDate *)dateFromString:(NSString *)dateString key:(NSString *)key options:(NSDictionary *)options error:(NSError **)error
+- (NSDate *)dateFromString:(NSString *)dateString
+                       key:(NSString *)key
+                   options:(NSDictionary *)options
+                     error:(NSError **)error
 {
     @throw [NSException exceptionWithName:@"SCV.ModelAutopopulateCouldNotParseDate" reason:[NSString stringWithFormat:@"Model autopopulate could not parse date for property %@", key] userInfo:nil];
 }
@@ -175,35 +203,48 @@
     @throw [NSException exceptionWithName:@"SCV.ModelAutopopulateCouldNotParseNumber" reason:[NSString stringWithFormat:@"Model autopopulate could not parse number for property %@. Override -[%@ numberValue:forKey:]", key, NSStringFromClass([self class])] userInfo:nil];
 }
 
+- (NSDate *)dateWithString:(NSString *)string
+                    forKey:(NSString *)key
+                   options:(NSDictionary *)options
+                     error:(NSError *__autoreleasing *)error
+{
+    @throw [NSException exceptionWithName:@"SCV.ModelAutopopulateCouldNotParseDate" reason:[NSString stringWithFormat:@"Model autopopulate could not parse date for property %@. Override -[%@ dateWithString:forKey:]", key, NSStringFromClass([self class])] userInfo:nil];
+}
+
 - (id)populatedObjectForKey:(NSString *)key
                       class:(Class)clazz
                      object:(id)object
                     options:(NSDictionary *)options
                       error:(NSError **)error
 {
-    return [clazz populatedObjectWithObject:object options:options error:error];
+    return [clazz populatedObjectWithObject:object options:options error:error parent:self parentKey:key];
 }
 
 - (Class)classTypeForKey:(NSString *)key options:(NSDictionary *)options error:(NSError *__autoreleasing *)error
 {
-    Class clazz = [[self class] classOfPropertyNamed:key];
-    if ([clazz isSubclassOfClass:[NSArray class]]) {
-        clazz = [self classForArrayPropertyWithKey:key options:options error:error];
-    }
-    return clazz;
+    return [[self class] classOfPropertyNamed:key];
 }
 
 #pragma mark -
 
-+ (instancetype)populatedObjectWithObject:(id)object options:(NSDictionary *)options error:(NSError **)error
++ (instancetype)populatedObjectWithObject:(id)object
+                                  options:(NSDictionary *)options
+                                    error:(NSError **)error
+                                   parent:(id)parent
+                                parentKey:(NSString *)parentKey
 {
-    if ([object isKindOfClass:[NSArray class]]) {
-        return [self populatedObjectArrayWithArray:object options:options error:error];
-    }
-    else if ([object isKindOfClass:[NSDictionary class]]) {
+    if ([object isKindOfClass:[NSDictionary class]]) {
         return [self populatedObjectWithDictionary:object options:options error:error];
     }
-    return nil;
+    else if ([object isEqual:[NSNull null]]){
+        return nil;
+    }
+    @throw [NSException exceptionWithName:@"SCV.ModelAutopopulateCouldNotUnderstandObject" reason:[NSString stringWithFormat:@"Model autopopulate could not understand object of type %@.", NSStringFromClass([object class])] userInfo:nil];
+}
+
++ (instancetype)populatedObjectWithObject:(id)object options:(NSDictionary *)options error:(NSError **)error
+{
+    return [self populatedObjectWithObject:object options:options error:error parent:nil parentKey:nil];
 }
 
 + (instancetype)populatedObjectWithDictionary:(NSDictionary *)dictionary options:(NSDictionary *)options error:(NSError *__autoreleasing *)error
@@ -234,9 +275,27 @@
 
 @end
 
+@implementation NSArray (SCVModel)
+
++ (instancetype)populatedObjectWithObject:(id)object
+                                  options:(NSDictionary *)options
+                                    error:(NSError *__autoreleasing *)error
+                                   parent:(id)parent
+                                parentKey:(NSString *)parentKey
+{
+    Class class = [parent classForArrayPropertyWithKey:parentKey options:options error:error];
+    return [class populatedObjectArrayWithArray:object options:options error:error];
+}
+
+@end
+
 @implementation NSNumber (SCVModel)
 
-+ (instancetype)populatedObjectWithObject:(id)object options:(NSDictionary *)options error:(NSError *__autoreleasing *)error
++ (instancetype)populatedObjectWithObject:(id)object
+                                  options:(NSDictionary *)options
+                                    error:(NSError **)error
+                                   parent:(id)parent
+                                parentKey:(NSString *)parentKey
 {
     if ([object isKindOfClass:[NSNumber class]]) {
         return object;
@@ -248,7 +307,11 @@
 
 @implementation NSString (SCVModel)
 
-+ (instancetype)populatedObjectWithObject:(id)object options:(NSDictionary *)options error:(NSError **)error
++ (instancetype)populatedObjectWithObject:(id)object
+                                  options:(NSDictionary *)options
+                                    error:(NSError **)error
+                                   parent:(id)parent
+                                parentKey:(NSString *)parentKey
 {
     if ([object isKindOfClass:[NSString class]]) {
         return object;
@@ -260,10 +323,33 @@
 
 @implementation NSURL (SCVModel)
 
-+ (instancetype)populatedObjectWithObject:(id)object options:(NSDictionary *)options error:(NSError *__autoreleasing *)error
++ (instancetype)populatedObjectWithObject:(id)object
+                                  options:(NSDictionary *)options
+                                    error:(NSError **)error
+                                   parent:(id)parent
+                                parentKey:(NSString *)parentKey
 {
     if ([object isKindOfClass:[NSString class]]) {
         return [NSURL URLWithString:object];
+    }
+    return [super populatedObjectWithObject:object options:options error:error];
+}
+
+@end
+
+@implementation NSDate (SCVModel)
+
++ (instancetype)populatedObjectWithObject:(id)object
+                                  options:(NSDictionary *)options
+                                    error:(NSError **)error
+                                   parent:(id)parent
+                                parentKey:(NSString *)parentKey
+{
+    if ([object isKindOfClass:[NSDate class]]) {
+        return object;
+    }
+    if ([object isKindOfClass:[NSString class]]) {
+        return [parent dateWithString:object forKey:parentKey options:options error:error];
     }
     return [super populatedObjectWithObject:object options:options error:error];
 }

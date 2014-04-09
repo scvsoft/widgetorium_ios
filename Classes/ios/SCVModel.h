@@ -10,7 +10,10 @@
 
 typedef enum {
     SCVModelPropertyTypeBool,
+    SCVModelPropertyTypeChar,
+    SCVModelPropertyTypeUnsignedChar,
     SCVModelPropertyTypeInt,
+    SCVModelPropertyTypeUnsignedInt,
     SCVModelPropertyTypeLong,
     SCVModelPropertyTypeUnsignedLong,
     SCVModelPropertyTypeFloat,
@@ -30,18 +33,8 @@ typedef enum {
                                       options:(NSDictionary *)options
                                         error:(NSError **)error;
 
-/*
- *  Override points:
- */
 - (BOOL)populateWithDictionary:(NSDictionary *)dictionary
                        options:(NSDictionary *)options
                          error:(NSError **)error;
-- (Class)classForArrayPropertyWithKey:(NSString *)key
-                              options:(NSDictionary *)options
-                                error:(NSError **)error;
-- (NSDate *)dateFromString:(NSString *)dateString
-                       key:(NSString *)key
-                   options:(NSDictionary *)options
-                     error:(NSError **)error;
 
 @end
