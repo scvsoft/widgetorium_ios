@@ -38,6 +38,7 @@
 		E40CEF1018C901E800B9B136 /* SCVDemoTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E40CEF0E18C901E800B9B136 /* SCVDemoTableViewController.xib */; };
 		E40CEF1418C9055B00B9B136 /* SCVLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E40CEF1218C9055B00B9B136 /* SCVLoadingViewController.m */; };
 		E40CEF1518C9055B00B9B136 /* SCVLoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E40CEF1318C9055B00B9B136 /* SCVLoadingViewController.xib */; };
+		E4A6F11A18FDABE20028BEC7 /* NSObject+PerformWithBlockAfterDelay.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A6F11918FDABE20028BEC7 /* NSObject+PerformWithBlockAfterDelay.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,8 @@
 		E40CEF1118C9055B00B9B136 /* SCVLoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCVLoadingViewController.h; sourceTree = "<group>"; };
 		E40CEF1218C9055B00B9B136 /* SCVLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCVLoadingViewController.m; sourceTree = "<group>"; };
 		E40CEF1318C9055B00B9B136 /* SCVLoadingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCVLoadingViewController.xib; sourceTree = "<group>"; };
+		E4A6F11818FDABE20028BEC7 /* NSObject+PerformWithBlockAfterDelay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PerformWithBlockAfterDelay.h"; sourceTree = "<group>"; };
+		E4A6F11918FDABE20028BEC7 /* NSObject+PerformWithBlockAfterDelay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PerformWithBlockAfterDelay.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,9 +229,9 @@
 		E40CEEF118C8E99600B9B136 /* WidgetoriumTests */ = {
 			isa = PBXGroup;
 			children = (
+				E40CEEF218C8E99600B9B136 /* Supporting Files */,
 				E40CEEF718C8E99600B9B136 /* UIColorTests.m */,
 				882AA0F118EF55FC006CBBCC /* SCVModelTest.m */,
-				E40CEEF218C8E99600B9B136 /* Supporting Files */,
 			);
 			path = WidgetoriumTests;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 		E40CEF0118C8EA5B00B9B136 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E4A6F11718FDABB20028BEC7 /* Perform with Block */,
 				882AA0CA18EDCFD7006CBBCC /* URLImageCache */,
 				882AA0E418EF295C006CBBCC /* Parser */,
 				E40CEF0318C8EAAD00B9B136 /* SCVLoadingScreen.h */,
@@ -277,6 +281,15 @@
 				882AA0DF18EE2F29006CBBCC /* demoImages.plist */,
 			);
 			path = Demo;
+			sourceTree = "<group>";
+		};
+		E4A6F11718FDABB20028BEC7 /* Perform with Block */ = {
+			isa = PBXGroup;
+			children = (
+				E4A6F11818FDABE20028BEC7 /* NSObject+PerformWithBlockAfterDelay.h */,
+				E4A6F11918FDABE20028BEC7 /* NSObject+PerformWithBlockAfterDelay.m */,
+			);
+			name = "Perform with Block";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -424,6 +437,7 @@
 				E40CEEE318C8E99600B9B136 /* SCVAppDelegate.m in Sources */,
 				E40CEF0F18C901E800B9B136 /* SCVDemoTableViewController.m in Sources */,
 				882AA0DC18EE1933006CBBCC /* SCVURLDownloader.m in Sources */,
+				E4A6F11A18FDABE20028BEC7 /* NSObject+PerformWithBlockAfterDelay.m in Sources */,
 				882AA0D518EE0481006CBBCC /* SCVDemoImageLoaderViewController.m in Sources */,
 				E40CEF1418C9055B00B9B136 /* SCVLoadingViewController.m in Sources */,
 				882AA0EA18EF2A12006CBBCC /* NSObject+SCVModel.m in Sources */,
