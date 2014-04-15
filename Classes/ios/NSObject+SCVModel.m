@@ -30,8 +30,8 @@
         NSString *key = [self keyForDictionaryKey:theKey];
 		SEL selector = [self setterForKey:key];
 		if (selector) {
-            NSMethodSignature* signature = [self methodSignatureForSelector:selector];
-            NSInvocation* invocation = [NSInvocation invocationWithMethodSignature:signature];
+            NSMethodSignature *signature = [self methodSignatureForSelector:selector];
+            NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
             [invocation setTarget:self];
             [invocation setSelector:selector];
             switch ([self typeForSignature:signature]) {
@@ -81,11 +81,10 @@
                     break;
                 }
                 case SCVModelPropertyTypeObject: {
-                    id obj = value;
-                    if (![obj isKindOfClass:[NSNull class]]) {
+                    if (![value isKindOfClass:[NSNull class]]) {
                         Class clazz = [self classTypeForKey:key options:options error:&error];
-                        obj = [self populatedObjectForKey:key class:clazz object:obj options:options error:&error];
-                        [invocation setArgument:&obj atIndex:2];
+                        value = [self populatedObjectForKey:key class:clazz object:value options:options error:&error];
+                        [invocation setArgument:&value atIndex:2];
                     }
                     else {
                         // do not set null values
