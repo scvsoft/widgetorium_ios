@@ -7,6 +7,7 @@
 //
 
 #import "SCVDemoTableViewController.h"
+#import "SCVViewsViewController.h"
 #import "SCVLoadingViewController.h"
 #import "SCVDemoImageLoaderViewController.h"
 
@@ -23,6 +24,7 @@
     self = [super init];
     if (self) {
         self.cellsInfo = @{
+            @"Views":        [SCVViewsViewController class],
             @"Loading View": [SCVLoadingViewController class],
             @"Image Loader": [SCVDemoImageLoaderViewController class]
         };
