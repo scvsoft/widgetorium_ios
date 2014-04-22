@@ -10,8 +10,9 @@
 
 @interface UIColor (Utils)
 
-//  Example: [UIColor colorWithHexa:0xRRGGBBAA]
-//  RR red value, GG green value, BB blue value, AA alpha value
+///  Returns a UIColor that matches the given hexa value.
+///  Example: [UIColor colorWithHexa:0xRRGGBBAA]
+///  RR red value, GG green value, BB blue value, AA alpha value
 + (UIColor *)colorWithHexa:(NSUInteger)hexaValue;
 
 - (UIColor *)colorWithRGBColorSpace;
