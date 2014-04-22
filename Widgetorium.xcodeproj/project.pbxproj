@@ -11,6 +11,8 @@
 		8820FB061905C09000F963D1 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8820FB051905C09000F963D1 /* UIView+Utils.m */; };
 		8820FB0A1905C21F00F963D1 /* SCVViewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8820FB081905C21F00F963D1 /* SCVViewsViewController.m */; };
 		8820FB0B1905C21F00F963D1 /* SCVViewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8820FB091905C21F00F963D1 /* SCVViewsViewController.xib */; };
+		8820FB0E1906E79400F963D1 /* NSArray+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8820FB0D1906E79400F963D1 /* NSArray+Utils.m */; };
+		8820FB101906EF4300F963D1 /* SCVArrayTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8820FB0F1906EF4300F963D1 /* SCVArrayTest.m */; };
 		882AA0CD18EDD013006CBBCC /* SCVURLImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 882AA0CC18EDD013006CBBCC /* SCVURLImageCache.m */; };
 		882AA0D018EDD033006CBBCC /* UIImageView+ImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 882AA0CF18EDD033006CBBCC /* UIImageView+ImageLoader.m */; };
 		882AA0D218EDDC10006CBBCC /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 882AA0D118EDDC10006CBBCC /* libsqlite3.dylib */; };
@@ -66,6 +68,9 @@
 		8820FB071905C21F00F963D1 /* SCVViewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCVViewsViewController.h; sourceTree = "<group>"; };
 		8820FB081905C21F00F963D1 /* SCVViewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCVViewsViewController.m; sourceTree = "<group>"; };
 		8820FB091905C21F00F963D1 /* SCVViewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCVViewsViewController.xib; sourceTree = "<group>"; };
+		8820FB0C1906E79400F963D1 /* NSArray+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Utils.h"; sourceTree = "<group>"; };
+		8820FB0D1906E79400F963D1 /* NSArray+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Utils.m"; sourceTree = "<group>"; };
+		8820FB0F1906EF4300F963D1 /* SCVArrayTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCVArrayTest.m; sourceTree = "<group>"; };
 		882AA0CB18EDD013006CBBCC /* SCVURLImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCVURLImageCache.h; sourceTree = "<group>"; };
 		882AA0CC18EDD013006CBBCC /* SCVURLImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCVURLImageCache.m; sourceTree = "<group>"; };
 		882AA0CE18EDD033006CBBCC /* UIImageView+ImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+ImageLoader.h"; sourceTree = "<group>"; };
@@ -146,6 +151,8 @@
 			children = (
 				00FCE9CC18DC8BCC00CD05F1 /* NSData+Utilities.h */,
 				00FCE9CD18DC8BCC00CD05F1 /* NSData+Utilities.m */,
+				8820FB0C1906E79400F963D1 /* NSArray+Utils.h */,
+				8820FB0D1906E79400F963D1 /* NSArray+Utils.m */,
 				88DB8B9418E3670D00614664 /* UIColor+Utils.h */,
 				88DB8B9518E3670D00614664 /* UIColor+Utils.m */,
 				8820FB041905C09000F963D1 /* UIView+Utils.h */,
@@ -254,6 +261,7 @@
 				E40CEEF218C8E99600B9B136 /* Supporting Files */,
 				E40CEEF718C8E99600B9B136 /* UIColorTests.m */,
 				882AA0F118EF55FC006CBBCC /* SCVModelTest.m */,
+				8820FB0F1906EF4300F963D1 /* SCVArrayTest.m */,
 			);
 			path = WidgetoriumTests;
 			sourceTree = "<group>";
@@ -458,6 +466,7 @@
 			files = (
 				88DB8B9618E3670D00614664 /* UIColor+Utils.m in Sources */,
 				E40CEF0518C8EAAD00B9B136 /* SCVLoadingScreen.m in Sources */,
+				8820FB0E1906E79400F963D1 /* NSArray+Utils.m in Sources */,
 				882AA0D018EDD033006CBBCC /* UIImageView+ImageLoader.m in Sources */,
 				8820FB061905C09000F963D1 /* UIView+Utils.m in Sources */,
 				E40CEEDF18C8E99600B9B136 /* main.m in Sources */,
@@ -480,6 +489,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				882AA0F218EF55FC006CBBCC /* SCVModelTest.m in Sources */,
+				8820FB101906EF4300F963D1 /* SCVArrayTest.m in Sources */,
 				E40CEEF818C8E99600B9B136 /* UIColorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
