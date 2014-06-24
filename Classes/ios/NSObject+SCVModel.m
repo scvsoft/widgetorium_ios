@@ -246,6 +246,10 @@
     return [self populatedObjectWithObject:object options:options error:error parent:nil parentKey:nil];
 }
 
++ (instancetype)populatedObjectWithObject:(id)object error:(NSError **)error {
+    return [self populatedObjectWithObject:object options:nil error:error parent:nil parentKey:nil];
+}
+
 + (instancetype)populatedObjectWithDictionary:(NSDictionary *)dictionary options:(NSDictionary *)options error:(NSError *__autoreleasing *)error
 {
     id retval = [self new];

@@ -5,6 +5,6 @@ DEPENDENCIES:
   - NSObjectProperties (~> 0.0.3)
 
 SPEC CHECKSUMS:
-  NSObjectProperties: 3be6022a376b7bab8cecd12138063e51cb5e9f05
+  NSObjectProperties: 2f975d8ccdc844a27830c55ce7b4a0fa766e2b01
 
-COCOAPODS: 0.29.0
+COCOAPODS: 0.32.1
