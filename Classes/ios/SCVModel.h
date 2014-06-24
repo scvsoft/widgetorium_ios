@@ -24,6 +24,9 @@ typedef enum {
 @protocol SCVModel <NSObject>
 
 + (instancetype)populatedObjectWithObject:(id)object
+                                    error:(NSError **)error;
+
++ (instancetype)populatedObjectWithObject:(id)object
                                   options:(NSDictionary *)options
                                     error:(NSError **)error;
 + (instancetype)populatedObjectWithDictionary:(NSDictionary *)dictionary
