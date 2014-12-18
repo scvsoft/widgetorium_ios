@@ -39,7 +39,7 @@
     
     UIView *loadingView = [[UIView alloc] initWithFrame: CGRectMake(0, 0, size.width, size.height)];
 	
-    loadingView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
+    loadingView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.6];
 	
 	UIActivityIndicatorView *activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle: UIActivityIndicatorViewStyleWhite];
 	activity.center = CGPointMake(loadingView.frame.size.width /2, loadingView.frame.size.height /2);
