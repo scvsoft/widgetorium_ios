@@ -13,6 +13,7 @@
 @interface SCVDemoImageLoaderViewController ()
 
 @property (nonatomic, strong) NSArray *urlStrings;
+@property (nonatomic, strong) UIImage *defaultImage;
 
 @end
 
@@ -25,6 +26,7 @@
 - (void)viewDidLoad
 {
     [[SCVURLImageCache sharedInstance] removeCachedImagesOlderThan:[NSDate dateWithTimeIntervalSinceNow:-60.]];
+    self.defaultImage = [UIImage imageNamed:@"default_image_loader"];
     NSString *path = [[NSBundle mainBundle] pathForResource:@"demoImages" ofType:@"plist"];
     self.urlStrings = [NSArray arrayWithContentsOfFile:path];
     [super viewDidLoad];
@@ -42,7 +44,7 @@
     UIImageView *imageView = (id)cell.contentView.subviews[0];
     NSString *urlString = self.urlStrings[(int)(drand48() * self.urlStrings.count)];
     NSURL *url = [NSURL URLWithString:urlString];
-    [imageView loadImageWithURL:url activityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    [imageView loadImageWithURL:url activityIndicatorStyle:UIActivityIndicatorViewStyleGray defaultImage:self.defaultImage];
     return cell;
 }
 

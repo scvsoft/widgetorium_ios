@@ -9,16 +9,35 @@
 #import "UIImageView+ImageLoader.h"
 #import "SCVURLImageCache.h"
 #import "SCVURLDownloader.h"
+#import <objc/runtime.h>
+
+
+static const char kDefaultImageViewLoaderKey;
+
+@interface UIImageView ()
+@property(nonatomic, strong) UIImage *defaultImage;
+@end
+
 
 @interface UIImageView (URLDownloaderObserver) <SCVURLDowloaderObserver>
-
 @end
+
 
 @implementation UIImageView (ImageLoader)
 
+- (UIImage*) defaultImage {
+    return  objc_getAssociatedObject(self, &kDefaultImageViewLoaderKey);
+}
+
+- (void) setDefaultImage:(UIImage *)defaultImage {
+    objc_setAssociatedObject(self, &kDefaultImageViewLoaderKey, defaultImage, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
 - (void)loadImageWithURL:(NSURL *)url
   activityIndicatorStyle:(UIActivityIndicatorViewStyle)style
+            defaultImage:(UIImage*)defaultImage
 {
+    self.defaultImage = defaultImage;
     [[SCVURLDownloader sharedInstance] cancelDownloadsWithObserver:self];
     UIImage *image = [[SCVURLImageCache sharedInstance] cachedImageForURL:url];
     self.image = image;
@@ -55,14 +74,17 @@
     UIImage *image = [[SCVURLImageCache sharedInstance] cachedImageForURL:url];
     if (!image) {
         image = [UIImage imageWithData:data];
-        [[SCVURLImageCache sharedInstance] setCachedImage:image forURL:url];
+        if (image) {
+            [[SCVURLImageCache sharedInstance] setCachedImage:image forURL:url];
+        }
     }
-    self.image = image;
+    self.image = image ? image : self.defaultImage;
     [[self activityIndicator] removeFromSuperview];
 }
 
 - (void)urlDownloader:(SCVURLDownloader *)downloader didFailedDownloadingFileWithURL:(NSURL *)url error:(NSError *)error
 {
+    self.image = self.defaultImage;
     [[self activityIndicator] removeFromSuperview];
 }
 
