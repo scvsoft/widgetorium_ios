@@ -11,6 +11,9 @@
 @interface UIImageView (ImageLoader)
 
 - (void)loadImageWithURL:(NSURL *)url
+  activityIndicatorStyle:(UIActivityIndicatorViewStyle)activityIndicatorStyle;
+
+- (void)loadImageWithURL:(NSURL *)url
   activityIndicatorStyle:(UIActivityIndicatorViewStyle)activityIndicatorStyle
             defaultImage:(UIImage*)defaultImage;
 

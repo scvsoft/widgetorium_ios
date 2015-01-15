@@ -35,6 +35,12 @@ static const char kDefaultImageViewLoaderKey;
 
 - (void)loadImageWithURL:(NSURL *)url
   activityIndicatorStyle:(UIActivityIndicatorViewStyle)style
+{
+    [self loadImageWithURL:url activityIndicatorStyle:style defaultImage:nil];
+}
+
+- (void)loadImageWithURL:(NSURL *)url
+  activityIndicatorStyle:(UIActivityIndicatorViewStyle)style
             defaultImage:(UIImage*)defaultImage
 {
     self.defaultImage = defaultImage;
