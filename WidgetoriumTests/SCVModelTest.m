@@ -18,6 +18,7 @@
 
 @property (nonatomic, strong) NSString *stringField;
 @property (nonatomic, assign) NSInteger intField;
+
 @property (nonatomic, assign) BOOL boolField;
 @property (nonatomic, assign) char charField;
 @property (nonatomic, assign) unsigned char unsignedCharField;

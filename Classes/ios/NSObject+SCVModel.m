@@ -278,6 +278,23 @@
 
 @end
 
+@implementation NSDictionary (SCVModel)
+
+
++ (instancetype)populatedObjectWithObject:(id)object
+                                  options:(NSDictionary *)options
+                                    error:(NSError *__autoreleasing *)error
+                                   parent:(id)parent
+                                parentKey:(NSString *)parentKey
+{
+    if ([object isKindOfClass:[NSDictionary class]]) {
+        return object;
+    }
+    @throw [NSException exceptionWithName:@"SCV.ModelPopulatedObjectWithObject" reason:[NSString stringWithFormat:@"Could not parse the object for property: %@ Expected class: %@ Value: %@", parentKey, NSStringFromClass([self class]), object] userInfo:nil];
+}
+
+@end
+
 @implementation NSArray (SCVModel)
 
 + (instancetype)populatedObjectWithObject:(id)object
@@ -303,7 +320,7 @@
     if ([object isKindOfClass:[NSNumber class]]) {
         return object;
     }
-    return [super populatedObjectWithObject:object options:options error:error];
+    @throw [NSException exceptionWithName:@"SCV.ModelPopulatedObjectWithObject" reason:[NSString stringWithFormat:@"Could not parse the object for property: %@ Expected class: %@ Value: %@", parentKey, NSStringFromClass([self class]), object] userInfo:nil];
 }
 
 @end
@@ -319,8 +336,7 @@
     if ([object isKindOfClass:[NSString class]]) {
         return object;
     }
-    return [super populatedObjectWithObject:object options:options error:error];
-}
+    @throw [NSException exceptionWithName:@"SCV.ModelPopulatedObjectWithObject" reason:[NSString stringWithFormat:@"Could not parse the object for property: %@ Expected class: %@ Value: %@", parentKey, NSStringFromClass([self class]), object] userInfo:nil];}
 
 @end
 
@@ -335,8 +351,7 @@
     if ([object isKindOfClass:[NSString class]]) {
         return [NSURL URLWithString:object];
     }
-    return [super populatedObjectWithObject:object options:options error:error];
-}
+    @throw [NSException exceptionWithName:@"SCV.ModelPopulatedObjectWithObject" reason:[NSString stringWithFormat:@"Could not parse the object for property: %@ Expected class: %@ Value: %@", parentKey, NSStringFromClass([self class]), object] userInfo:nil];}
 
 @end
 
@@ -354,7 +369,7 @@
     if ([object isKindOfClass:[NSString class]]) {
         return [parent dateWithString:object forKey:parentKey options:options error:error];
     }
-    return [super populatedObjectWithObject:object options:options error:error];
+    @throw [NSException exceptionWithName:@"SCV.ModelPopulatedObjectWithObject" reason:[NSString stringWithFormat:@"Could not parse the object for property: %@ Expected class: %@ Value: %@", parentKey, NSStringFromClass([self class]), object] userInfo:nil];
 }
 
 @end
