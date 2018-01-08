@@ -297,7 +297,7 @@
         return object;
     }
     
-    *error = [super errorParsingProperty:parentKey value:object];
+    *error = [self errorParsingProperty:parentKey value:object];
     return nil;
 }
 
@@ -329,7 +329,7 @@
         return object;
     }
     
-    *error = [super errorParsingProperty:parentKey value:object];
+    *error = [self errorParsingProperty:parentKey value:object];
     return nil;
 }
 
@@ -347,7 +347,7 @@
         return object;
     }
     
-    *error = [super errorParsingProperty:parentKey value:object];
+    *error = [self errorParsingProperty:parentKey value:object];
     return nil;
 }
 
@@ -365,7 +365,7 @@
         return [NSURL URLWithString:object];
     }
     
-    *error = [super errorParsingProperty:parentKey value:object];
+    *error = [self errorParsingProperty:parentKey value:object];
     return nil;
 }
 
@@ -386,7 +386,7 @@
         return [parent dateWithString:object forKey:parentKey options:options error:error];
     }
     
-    *error = [super errorParsingProperty:parentKey value:object];
+    *error = [self errorParsingProperty:parentKey value:object];
     return nil;
 }
 
