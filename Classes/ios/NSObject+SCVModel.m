@@ -276,6 +276,31 @@
     return [output copy];
 }
 
++ (NSError *)errorParsingProperty:(NSString *)key value:(id)value {
+    return [NSError errorWithDomain:@"Widgetorium-Error"
+                               code:666
+                           userInfo:@{NSLocalizedDescriptionKey: [NSString stringWithFormat:@"Could not parse the Property: %@ Expected class: %@ Current class: %@ Value: %@", key, NSStringFromClass([self class]), NSStringFromClass([value class]), value]}];
+}
+
+@end
+
+@implementation NSDictionary (SCVModel)
+
+
++ (instancetype)populatedObjectWithObject:(id)object
+                                  options:(NSDictionary *)options
+                                    error:(NSError *__autoreleasing *)error
+                                   parent:(id)parent
+                                parentKey:(NSString *)parentKey
+{
+    if ([object isKindOfClass:[NSDictionary class]]) {
+        return object;
+    }
+    
+    *error = [self errorParsingProperty:parentKey value:object];
+    return nil;
+}
+
 @end
 
 @implementation NSArray (SCVModel)
@@ -303,7 +328,9 @@
     if ([object isKindOfClass:[NSNumber class]]) {
         return object;
     }
-    return [super populatedObjectWithObject:object options:options error:error];
+    
+    *error = [self errorParsingProperty:parentKey value:object];
+    return nil;
 }
 
 @end
@@ -319,7 +346,9 @@
     if ([object isKindOfClass:[NSString class]]) {
         return object;
     }
-    return [super populatedObjectWithObject:object options:options error:error];
+    
+    *error = [self errorParsingProperty:parentKey value:object];
+    return nil;
 }
 
 @end
@@ -335,7 +364,9 @@
     if ([object isKindOfClass:[NSString class]]) {
         return [NSURL URLWithString:object];
     }
-    return [super populatedObjectWithObject:object options:options error:error];
+    
+    *error = [self errorParsingProperty:parentKey value:object];
+    return nil;
 }
 
 @end
@@ -354,7 +385,9 @@
     if ([object isKindOfClass:[NSString class]]) {
         return [parent dateWithString:object forKey:parentKey options:options error:error];
     }
-    return [super populatedObjectWithObject:object options:options error:error];
+    
+    *error = [self errorParsingProperty:parentKey value:object];
+    return nil;
 }
 
 @end

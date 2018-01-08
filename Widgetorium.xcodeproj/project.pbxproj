@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00FCE9CE18DC8BCC00CD05F1 /* NSData+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FCE9CD18DC8BCC00CD05F1 /* NSData+Utilities.m */; };
+		1870CCB3E421A751FA246329 /* libPods-Widgetorium.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FCF4BFFA6D8B79A394D06ABA /* libPods-Widgetorium.a */; };
 		8820FB061905C09000F963D1 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8820FB051905C09000F963D1 /* UIView+Utils.m */; };
 		8820FB0A1905C21F00F963D1 /* SCVViewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8820FB081905C21F00F963D1 /* SCVViewsViewController.m */; };
 		8820FB0B1905C21F00F963D1 /* SCVViewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8820FB091905C21F00F963D1 /* SCVViewsViewController.xib */; };
@@ -28,7 +29,6 @@
 		882AA0F218EF55FC006CBBCC /* SCVModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 882AA0F118EF55FC006CBBCC /* SCVModelTest.m */; };
 		88B1F6D219057F980081B5BE /* SCVButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B1F6D119057F980081B5BE /* SCVButton.m */; };
 		88DB8B9618E3670D00614664 /* UIColor+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DB8B9518E3670D00614664 /* UIColor+Utils.m */; };
-		D3A5B3185792452CAA749C78 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EB743D22A0F421CA6DA163E /* libPods.a */; };
 		E40CEED318C8E99600B9B136 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40CEED218C8E99600B9B136 /* Foundation.framework */; };
 		E40CEED518C8E99600B9B136 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40CEED418C8E99600B9B136 /* CoreGraphics.framework */; };
 		E40CEED718C8E99600B9B136 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40CEED618C8E99600B9B136 /* UIKit.framework */; };
@@ -64,8 +64,7 @@
 		00FCE9CC18DC8BCC00CD05F1 /* NSData+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Utilities.h"; sourceTree = "<group>"; };
 		00FCE9CD18DC8BCC00CD05F1 /* NSData+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Utilities.m"; sourceTree = "<group>"; };
 		00FCE9CF18DC8CD700CD05F1 /* Widgetorium.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Widgetorium.podspec; sourceTree = SOURCE_ROOT; };
-		1EB743D22A0F421CA6DA163E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		50449CCA36349B314CD002C6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		5509CA8A7D15C4537F289063 /* Pods-Widgetorium.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Widgetorium.release.xcconfig"; path = "Pods/Target Support Files/Pods-Widgetorium/Pods-Widgetorium.release.xcconfig"; sourceTree = "<group>"; };
 		8820FB041905C09000F963D1 /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Utils.h"; sourceTree = "<group>"; };
 		8820FB051905C09000F963D1 /* UIView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utils.m"; sourceTree = "<group>"; };
 		8820FB071905C21F00F963D1 /* SCVViewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCVViewsViewController.h; sourceTree = "<group>"; };
@@ -98,6 +97,7 @@
 		88B1F6D119057F980081B5BE /* SCVButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCVButton.m; sourceTree = "<group>"; };
 		88DB8B9418E3670D00614664 /* UIColor+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Utils.h"; sourceTree = "<group>"; };
 		88DB8B9518E3670D00614664 /* UIColor+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Utils.m"; sourceTree = "<group>"; };
+		BE36BB658E38C19B0531846D /* Pods-Widgetorium.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Widgetorium.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Widgetorium/Pods-Widgetorium.debug.xcconfig"; sourceTree = "<group>"; };
 		E40CEECF18C8E99600B9B136 /* Widgetorium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Widgetorium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E40CEED218C8E99600B9B136 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E40CEED418C8E99600B9B136 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -125,7 +125,7 @@
 		E49DBCBD1A5718770007F5BC /* default_image_loader@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "default_image_loader@2x.png"; path = "Widgetorium/Demo/default_image_loader@2x.png"; sourceTree = SOURCE_ROOT; };
 		E4A6F11818FDABE20028BEC7 /* NSObject+PerformWithBlockAfterDelay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PerformWithBlockAfterDelay.h"; sourceTree = "<group>"; };
 		E4A6F11918FDABE20028BEC7 /* NSObject+PerformWithBlockAfterDelay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PerformWithBlockAfterDelay.m"; sourceTree = "<group>"; };
-		E6E0209A138503AC1E21547B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		FCF4BFFA6D8B79A394D06ABA /* libPods-Widgetorium.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Widgetorium.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,7 +137,7 @@
 				E40CEED518C8E99600B9B136 /* CoreGraphics.framework in Frameworks */,
 				E40CEED718C8E99600B9B136 /* UIKit.framework in Frameworks */,
 				E40CEED318C8E99600B9B136 /* Foundation.framework in Frameworks */,
-				D3A5B3185792452CAA749C78 /* libPods.a in Frameworks */,
+				1870CCB3E421A751FA246329 /* libPods-Widgetorium.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,11 +172,11 @@
 			path = Categories/ios;
 			sourceTree = "<group>";
 		};
-		3AE17F884C71E4B060E26064 /* Pods */ = {
+		49DB624A198D5836B63ACDEB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				50449CCA36349B314CD002C6 /* Pods.debug.xcconfig */,
-				E6E0209A138503AC1E21547B /* Pods.release.xcconfig */,
+				BE36BB658E38C19B0531846D /* Pods-Widgetorium.debug.xcconfig */,
+				5509CA8A7D15C4537F289063 /* Pods-Widgetorium.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -223,7 +223,7 @@
 				E40CEEF118C8E99600B9B136 /* WidgetoriumTests */,
 				E40CEED118C8E99600B9B136 /* Frameworks */,
 				E40CEED018C8E99600B9B136 /* Products */,
-				3AE17F884C71E4B060E26064 /* Pods */,
+				49DB624A198D5836B63ACDEB /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -244,7 +244,7 @@
 				E40CEED418C8E99600B9B136 /* CoreGraphics.framework */,
 				E40CEED618C8E99600B9B136 /* UIKit.framework */,
 				E40CEEEB18C8E99600B9B136 /* XCTest.framework */,
-				1EB743D22A0F421CA6DA163E /* libPods.a */,
+				FCF4BFFA6D8B79A394D06ABA /* libPods-Widgetorium.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -354,11 +354,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E40CEEFB18C8E99600B9B136 /* Build configuration list for PBXNativeTarget "Widgetorium" */;
 			buildPhases = (
-				1FA67ABE06D642A68F5B70EC /* Check Pods Manifest.lock */,
+				7BD590793B5192C45B9B1979 /* [CP] Check Pods Manifest.lock */,
 				E40CEECB18C8E99600B9B136 /* Sources */,
 				E40CEECC18C8E99600B9B136 /* Frameworks */,
 				E40CEECD18C8E99600B9B136 /* Resources */,
-				9868A4E2802349AB9EA7E2E6 /* Copy Pods Resources */,
+				7FC68B2327DE14B35D82E839 /* [CP] Embed Pods Frameworks */,
+				8EA5AB281B20B7A6C8EDA096 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -394,7 +395,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = SCV;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = SCVSoft;
 				TargetAttributes = {
 					E40CEEE918C8E99600B9B136 = {
@@ -449,34 +450,52 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1FA67ABE06D642A68F5B70EC /* Check Pods Manifest.lock */ = {
+		7BD590793B5192C45B9B1979 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Widgetorium-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9868A4E2802349AB9EA7E2E6 /* Copy Pods Resources */ = {
+		7FC68B2327DE14B35D82E839 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Widgetorium/Pods-Widgetorium-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8EA5AB281B20B7A6C8EDA096 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Widgetorium/Pods-Widgetorium-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -552,23 +571,34 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -581,7 +611,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -592,30 +622,40 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -624,13 +664,14 @@
 		};
 		E40CEEFC18C8E99600B9B136 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 50449CCA36349B314CD002C6 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = BE36BB658E38C19B0531846D /* Pods-Widgetorium.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Widgetorium/Widgetorium-Prefix.pch";
 				INFOPLIST_FILE = "Widgetorium/Widgetorium-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.scvsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -638,13 +679,14 @@
 		};
 		E40CEEFD18C8E99600B9B136 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E6E0209A138503AC1E21547B /* Pods.release.xcconfig */;
+			baseConfigurationReference = 5509CA8A7D15C4537F289063 /* Pods-Widgetorium.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Widgetorium/Widgetorium-Prefix.pch";
 				INFOPLIST_FILE = "Widgetorium/Widgetorium-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.scvsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -653,7 +695,6 @@
 		E40CEEFF18C8E99600B9B136 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Widgetorium.app/Widgetorium";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -667,6 +708,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "WidgetoriumTests/WidgetoriumTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.scvsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -676,7 +718,6 @@
 		E40CEF0018C8E99600B9B136 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Widgetorium.app/Widgetorium";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -686,6 +727,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Widgetorium/Widgetorium-Prefix.pch";
 				INFOPLIST_FILE = "WidgetoriumTests/WidgetoriumTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.scvsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
