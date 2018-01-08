@@ -18,7 +18,7 @@
 
 @property (nonatomic, strong) NSString *stringField;
 @property (nonatomic, assign) NSInteger intField;
-
+@property (nonatomic, strong) NSNumber *numberField;
 @property (nonatomic, assign) BOOL boolField;
 @property (nonatomic, assign) char charField;
 @property (nonatomic, assign) unsigned char unsignedCharField;
@@ -85,18 +85,42 @@ typedef NS_ENUM(NSUInteger, SCVTestEnum) {
 
 @implementation SCVModelTest
 
+- (void)testErrorParsing {
+    NSDictionary *input = @{
+                            @"stringField": @"stringValue",
+                            @"intField": @(123456789),
+                            @"numberField": @"0",
+                            @"boolField": @YES,
+                            @"charField": @(123),
+                            @"unsignedCharField": @(250)
+                            };
+    NSError *error = nil;
+    TestSimpleModel *object = [TestSimpleModel populatedObjectWithObject:input options:nil error:&error];
+    XCTAssertNotNil(error);
+    XCTAssertEqualObjects(object.stringField, @"stringValue", @"");
+    XCTAssertEqual(object.intField, 123456789, @"");
+    XCTAssertNil(object.numberField);
+    XCTAssertEqual(object.boolField, YES, @"");
+    XCTAssertEqual(object.charField, 123, @"");
+    XCTAssertEqual(object.unsignedCharField, 250, @"");
+}
+
 - (void)testSimpleModel
 {
     NSDictionary *input = @{
         @"stringField": @"stringValue",
         @"intField": @(123456789),
+        @"numberField": @0,
         @"boolField": @YES,
         @"charField": @(123),
         @"unsignedCharField": @(250)
     };
-    TestSimpleModel *object = [TestSimpleModel populatedObjectWithObject:input options:nil error:NULL];
+    NSError *error = nil;
+    TestSimpleModel *object = [TestSimpleModel populatedObjectWithObject:input options:nil error:&error];
+    XCTAssertNil(error);
     XCTAssertEqualObjects(object.stringField, @"stringValue", @"");
     XCTAssertEqual(object.intField, 123456789, @"");
+    XCTAssertEqual(object.numberField, @0, @"");
     XCTAssertEqual(object.boolField, YES, @"");
     XCTAssertEqual(object.charField, 123, @"");
     XCTAssertEqual(object.unsignedCharField, 250, @"");

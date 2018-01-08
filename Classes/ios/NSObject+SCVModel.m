@@ -276,6 +276,12 @@
     return [output copy];
 }
 
++ (NSError *)errorParsingProperty:(NSString *)key value:(id)value {
+    return [NSError errorWithDomain:@"Widgetorium-Error"
+                               code:666
+                           userInfo:@{NSLocalizedDescriptionKey: [NSString stringWithFormat:@"Could not parse the Property: %@ Expected class: %@ Current class: %@ Value: %@", key, NSStringFromClass([self class]), NSStringFromClass([value class]), value]}];
+}
+
 @end
 
 @implementation NSDictionary (SCVModel)
@@ -290,7 +296,9 @@
     if ([object isKindOfClass:[NSDictionary class]]) {
         return object;
     }
-    @throw [NSException exceptionWithName:@"SCV.ModelPopulatedObjectWithObject" reason:[NSString stringWithFormat:@"Could not parse the object for property: %@ Expected class: %@ Value: %@", parentKey, NSStringFromClass([self class]), object] userInfo:nil];
+    
+    *error = [super errorParsingProperty:parentKey value:object];
+    return nil;
 }
 
 @end
@@ -320,7 +328,9 @@
     if ([object isKindOfClass:[NSNumber class]]) {
         return object;
     }
-    @throw [NSException exceptionWithName:@"SCV.ModelPopulatedObjectWithObject" reason:[NSString stringWithFormat:@"Could not parse the object for property: %@ Expected class: %@ Value: %@", parentKey, NSStringFromClass([self class]), object] userInfo:nil];
+    
+    *error = [super errorParsingProperty:parentKey value:object];
+    return nil;
 }
 
 @end
@@ -336,7 +346,10 @@
     if ([object isKindOfClass:[NSString class]]) {
         return object;
     }
-    @throw [NSException exceptionWithName:@"SCV.ModelPopulatedObjectWithObject" reason:[NSString stringWithFormat:@"Could not parse the object for property: %@ Expected class: %@ Value: %@", parentKey, NSStringFromClass([self class]), object] userInfo:nil];}
+    
+    *error = [super errorParsingProperty:parentKey value:object];
+    return nil;
+}
 
 @end
 
@@ -351,7 +364,10 @@
     if ([object isKindOfClass:[NSString class]]) {
         return [NSURL URLWithString:object];
     }
-    @throw [NSException exceptionWithName:@"SCV.ModelPopulatedObjectWithObject" reason:[NSString stringWithFormat:@"Could not parse the object for property: %@ Expected class: %@ Value: %@", parentKey, NSStringFromClass([self class]), object] userInfo:nil];}
+    
+    *error = [super errorParsingProperty:parentKey value:object];
+    return nil;
+}
 
 @end
 
@@ -369,7 +385,9 @@
     if ([object isKindOfClass:[NSString class]]) {
         return [parent dateWithString:object forKey:parentKey options:options error:error];
     }
-    @throw [NSException exceptionWithName:@"SCV.ModelPopulatedObjectWithObject" reason:[NSString stringWithFormat:@"Could not parse the object for property: %@ Expected class: %@ Value: %@", parentKey, NSStringFromClass([self class]), object] userInfo:nil];
+    
+    *error = [super errorParsingProperty:parentKey value:object];
+    return nil;
 }
 
 @end
